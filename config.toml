@@ -1,0 +1,7 @@
+baseURL = "http://luizbon.com/"
+languageCode = "en-au"
+title = "Luiz Bon"
+
+[Params]
+    Author = "Luiz Bon"
+    disqusShortname = luizbon
