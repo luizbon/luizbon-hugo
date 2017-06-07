@@ -1,7 +1,7 @@
-baseURL = "http://luizbon.com/"
+baseURL = "https://luizbon.github.io"
 languageCode = "en-au"
 title = "Luiz Bon"
 
 [Params]
     Author = "Luiz Bon"
-    disqusShortname = luizbon
+    disqusShortname = "luizbon"
