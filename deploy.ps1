@@ -5,7 +5,7 @@ Param(
 Write-Host "Deploying updates to GitHub..."
 
 # Build the project.
-hugo -t material-design
+hugo -t cocoa
 
 # Go To Public folder
 Set-Location public
