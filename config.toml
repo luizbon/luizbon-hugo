@@ -1,10 +1,11 @@
 baseURL = "https://www.luizbon.com"
 builddrafts         = false
-canonifyurls        = true
-contentdir          = "content"
+canonifyurls        = false
 languageCode        = "en-AU"
 layoutdir           = "layouts"
 publishdir          = "public"
+enableGitInfo       = true
+enableRobotsTXT     = true
 theme               = "cocoa"
 author              = "Luiz Bon"
 title               = "Luiz Bon"
@@ -12,6 +13,10 @@ pygmentsuseclasses  = true
 disqusshortname     = "luizbon" # Comment out to disable Disqus.
 pluralizelisttitles = false
 # googleAnalytics     = "UA-123-45"
+
+[imaging]
+resampleFilter      = "box"
+anchor              = "smart"
 
 [permalinks]
 blog  = "blog/:slug/"
