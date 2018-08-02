@@ -14,6 +14,9 @@ disqusshortname     = "luizbon" # Comment out to disable Disqus.
 pluralizelisttitles = false
 # googleAnalytics     = "UA-123-45"
 
+[blackfriday]
+hrefTargetBlank = true
+
 [imaging]
 resampleFilter      = "box"
 anchor              = "smart"
