@@ -19,13 +19,13 @@ What I'm going to cover here is:
 - Hiring processes
 
 ## Why do companies do technical interviews
-There's no regulation on the IT industry like on other as Medicine where professionals need to pass a test and proof they'll not kill someone.
-Unless you're making a medical app or coding an aeroplane computer, you're probably not putting anyone life in danger. You'll most likely write code for a website or similar experience.
+There's no regulation on the IT industry like on other as Medicine where professionals need to pass a test and prove they'll not kill someone.
+Unless you're making a medical app or coding an aeroplane computer, you're probably not putting anyone's life in danger. You'll most likely write code for a website or similar experience.
 
 Even if there was a regulatory entity, the IT industry is so broad and fast-evolving that professionals will need to update their tests regularly.  Also, by the time the test is ready, the technology is already old.
 To make sure a candidate know what their CV's states, the best option for companies is to do their own tests.
 
-To access the candidates' skills the companies need someone to run those tests, that's when it comes into play the interviewer.
+To access the candidates' skills the companies need someone to run those tests, that is when the interviewer comes into play.
 
 ## The interviewer
 Just thinking about interviewer most of the people will think about someone smart and want to make you fail.
