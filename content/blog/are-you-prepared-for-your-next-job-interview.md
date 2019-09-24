@@ -22,7 +22,7 @@ What I'm going to cover here is:
 There's no regulation on the IT industry like on other as Medicine where professionals need to pass a test and prove they'll not kill someone.
 Unless you're making a medical app or coding an aeroplane computer, you're probably not putting anyone's life in danger. You'll most likely write code for a website or similar experience.
 
-Even if there was a regulatory entity, the IT industry is so broad and fast-evolving that professionals will need to update their tests regularly.  Also, by the time the test is ready, the technology is already old.
+Even if there was a regulatory entity, the IT industry is so broad and fast-evolving that professionals will need to update their tests regularly.  Also, by the time the test is ready, the technology is already outdated.
 To make sure a candidate know what their CV's states, the best option for companies is to do their own tests.
 
 To access the candidates' skills the companies need someone to run those tests, that is when the interviewer comes into play.
@@ -47,7 +47,7 @@ I can enumerate a few skills to help me find good candidates.
 
 - **Knowledge** - the candidate will show excellent expertise on technologies
 - **Communication** - even people thinking that IT professionals work on their computers all the time, communication is vital for them to work with stakeholders and colleagues. No one works alone.
-- **Experience** - is essential to have experience on the tech stack they work with.
+- **Experience** - it is essential to have experience on the tech stack they work with.
 - **Problem solver** - humans are problem solvers by nature, and IT professionals take this to the next level by scaling the solutions.
 
 Any candidate who can present those skills is considered a good candidate, but we can find better candidates if we evaluate a different set of skills.
@@ -64,11 +64,11 @@ Usually, companies are very creative in their hiring processes, the problem with
 
 When a process is too complicated, it takes time, leading the candidate to withdraw. With the competitive market, we live nowadays, we need to be quick to hire the best candidates. Unless you are one of the major IT brands in the world.
 
-So far, I worked for two companies as an interviewer. Maybe I'm suspect to say, but their hiring processes are straightforward.
+So far, I worked for two companies as an interviewer. Perhaps I am biased, but their hiring processes are straightforward.
 
 The first one is composed of 5 steps.
 
-- **Technical puzzle** - this is an in-house fully automated puzzle where the candidate generates a token, write their code and submit to the system. There's no human interaction, hence no costs to filter candidate who doesn't have minimal experience.
+- **Technical puzzle** - this is an in-house fully automated puzzle where the candidate generates a token, write their code and submit to the system. There's no human interaction, hence there are no costs to filter candidates who do not have the minimum experience.
 - **Live coding challenge** - remote 30-minute code exercise where the candidate will use their own computer and IDE with the opportunity to show their coding skills. Usually, the task is to debug a broken app.
 - **Technical interview** - remote or in-person chat about the candidate's technical knowledge. This chat will most likely be driven by the candidate, depending on how they answer the questions.
 - **Management interview** - this stage is non-technical with a manager and a people & culture person. They'll make sure the candidate is aligned with the company values.
@@ -79,7 +79,7 @@ That process is pleasant, straightforward, but it lacks a formal way to identify
 The second process has a significant step to try to identify the great candidate skills.
 
 - **Phone screening** - as the name says, this is a phone call where the interviewer will try to filter out the candidates who don't have minimal experience.
-- **Technical interview** - this step can take up to 1,5 hours and is composed of a code challenge and technical discussion.
+- **Technical interview** - this step can take up to 1.5 hours and is composed of a code challenge and technical discussion.
 - **Behavioural interview** - that's when the interviewer is focused on identifying great candidate skills with non-technical questions.
 - **Cultural interview** - interviewers from a different department will access the candidate based on the company's values to make sure they are a good fit.
 - **Offer!**
