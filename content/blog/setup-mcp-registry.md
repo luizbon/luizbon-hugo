@@ -46,7 +46,7 @@ First, we'll follow the steps outlined in the [official Microsoft documentation]
     *   In the Visibility section, check the option "Allow "anonymous" access", otherwise GitHub Copilot won't be able to access the MCP registry.
 
 4.  **Expose the MCP Endpoint**:
-    *   Azure API Center automatically provides an MCP-compatible endpoint. You can find this endpoint URL in the API Center's overview page in the Azure portal. It will look something like this: `https://<your-api-center-name>.data.<location>.azure-apicenter.ms/workspaces/default/v0/servers`.
+    *   Azure API Center automatically provides an MCP-compatible endpoint. You can find this endpoint URL in the API Center's overview page in the Azure portal. It will look something like this: `https://<your-api-center-name>.data.<location>.azure-apicenter.ms/workspaces/default`.
 
 By the end of this part, you will have a functional MCP server URL ready to be used by clients like GitHub Copilot.
 
@@ -60,7 +60,7 @@ Before configuring GitHub Copilot, verify you have:
 
 *   **Organization owner or enterprise administrator role** in your GitHub organization. If you're unsure of your role, check your organization's "People" settings.
 *   **GitHub Copilot Business or Enterprise subscription** active for your organization. GitHub Copilot Individual subscriptions do not support MCP registry configuration.
-*   **The MCP endpoint URL** from Part 1 (format: `https://<your-api-center-name>.data.<location>.azure-apicenter.ms/workspaces/default/v0/servers`).
+*   **The MCP endpoint URL** from Part 1 (format: `https://<your-api-center-name>.data.<location>.azure-apicenter.ms/workspaces/default`).
 *   **Access to your GitHub organization settings**, specifically the "Copilot" section under organization settings.
 
 **Note:** Changes to MCP server policies may take up to 15 minutes to propagate to all users in your organization.
