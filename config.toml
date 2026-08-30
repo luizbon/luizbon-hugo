@@ -1,73 +1,94 @@
-baseURL = "https://luizbon.com"
-builddrafts         = false
-canonifyurls        = false
+baseURL             = "https://luizbon.com"
 languageCode        = "en-AU"
-layoutdir           = "layouts"
-publishdir          = "public"
+publishDir          = "public"
+buildDrafts         = false
+canonifyURLs        = false
 enableGitInfo       = true
 enableRobotsTXT     = true
 theme               = "hugo-PaperMod"
 author              = "Luiz Bon"
 title               = "Luiz Bon"
-pygmentsuseclasses  = true
-disqusshortname     = "luizbon" # Comment out to disable Disqus.
-pluralizelisttitles = false
+copyright           = "Luiz Bon"
+disqusShortname     = "luizbon" # Comment out to disable Disqus.
+pluralizeListTitles = false
 # googleAnalytics     = "UA-123-45"
 
-[blackfriday]
-hrefTargetBlank = true
-
 [imaging]
-resampleFilter      = "box"
-anchor              = "smart"
+resampleFilter = "box"
+anchor         = "smart"
 
 [permalinks]
-blog  = "blog/:slug/"
+blog = "blog/:slug/"
+
+# Plain-text index of the site, published at /llms.txt, for LLM retrieval.
+[outputFormats.LLMS]
+mediaType     = "text/plain"
+baseName      = "llms"
+isPlainText   = true
+notAlternative = true
+
+[outputs]
+home = ["HTML", "RSS", "LLMS"]
 
 [[menu.main]]
-name                   = "Blog"
-weight                 = -120
-identifier             = "blog"
-url                    = "/blog/"
+name       = "Blog"
+weight     = -120
+identifier = "blog"
+url        = "/blog/"
 
 [[menu.main]]
-name                   = "About"
-weight                 = -110
-identifier             = "about"
-url                    = "/about/"
-
-# [[menu.main]]
-# name                   = "Code"
-# weight                 = -100
-# identifier             = "code"
-# url                    = "/code/"
+name       = "About"
+weight     = -110
+identifier = "about"
+url        = "/about/"
 
 [params]
-latestpostscount       = 5                             # how many posts to display on the home page
-i18n_flags             = false                         # whether to display small country flags for available translations
-author                 = "Luiz Bon"
-cachebuster            = true                          # add the current unix timestamp in query string for cache busting css assets
-dateform               = "Jan 2, 2006"
-dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
-description            = "Don't panic"
-email                  = "luizbon@luizbon.com"
-# extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
-# faviconfile            = "img/leaf.ico"
-github                 = "//github.com/luizbon"
-highlightjs            = true
-# instagram              = "//instagram.com/luizbon"
-lang                   = "en"
-linkedin               = "//linkedin.com/in/luizbon"
-noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
-selfintro              = ""                            # appears in the site header when set to a non-empty string
-twitter                = "//twitter.com/luizbon"
-# mastodon               = "//example.com/@you"
-# highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
-# highlightjsStyle     = "darcula"
+author      = "Luiz Bon"
+description = "Luiz Bon is an engineering manager in Sydney writing about event-driven .NET on Azure, platform engineering, and governing AI coding agents inside an engineering organisation."
+keywords    = ["Luiz Bon", ".NET", "Azure", "event-driven architecture", "MCP", "engineering leadership", "platform engineering", "Sydney"]
+DateFormat  = "January 2, 2006"
 
-piwik				   = false                         # If true, Piwik integration is enabled
-# piwik_url            = "//www.example.com/piwik/"    # URL to your Piwik installation. Must End with a slash
-# piwik_id			   = 2                             # Id of your site in Piwik
+# Emit the full post body in the RSS feed rather than a summary, so
+# aggregators and crawlers can read a post without fetching the page.
+ShowFullTextinRSS = true
 
-# avatar                 = "img/profile.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
-gravatar             = "d9d41c7b9862ebe28b1a369bfe2c5a30"                # do not use in the same time as avatar
+ShowReadingTime     = true
+ShowBreadCrumbs     = true
+ShowPostNavLinks    = true
+ShowCodeCopyButtons = true
+ShowToc             = true
+TocOpen             = false
+ShowWordCount       = true
+ShowRssButtonInSectionTermList = true
+
+[params.homeInfoParams]
+Title   = "Luiz Bon"
+Content = "Engineering manager in Sydney. I write about event-driven .NET on Azure, platform engineering, and how AI coding agents fit safely into an engineering organisation."
+
+# Drives the Person entity in the homepage JSON-LD (see themes/hugo-PaperMod
+# /layouts/partials/templates/schema_json.html) and the header social links.
+[params.schema]
+publisherType = "Person"
+sameAs = [
+  "https://github.com/luizbon",
+  "https://www.linkedin.com/in/luizbon",
+  "https://luizbon.com",
+]
+
+[[params.socialIcons]]
+name = "github"
+url  = "https://github.com/luizbon"
+
+[[params.socialIcons]]
+name = "linkedin"
+url  = "https://www.linkedin.com/in/luizbon"
+
+[[params.socialIcons]]
+name = "rss"
+url  = "https://luizbon.com/index.xml"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false

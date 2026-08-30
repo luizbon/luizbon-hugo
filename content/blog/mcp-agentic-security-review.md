@@ -1,7 +1,18 @@
 ---
 title: "An MCP registry isn't enough. You need a review gate too"
+slug: "mcp-registry-needs-a-review-gate"
+aliases:
+  - "/blog/an-mcp-registry-isnt-enough.-you-need-a-review-gate-too/"
 date: 2026-08-28T09:00:00+10:00
 draft: false
+description: "Why an MCP registry alone is not enough: adding an agentic security review gate in CI that checks what an MCP server actually does, not just whether it is on the approved list."
+tags:
+  - "MCP"
+  - "AI agents"
+  - "GitHub Copilot"
+  - "security"
+  - "platform engineering"
+  - "CI/CD"
 ---
 
 I wrote about [setting up an MCP Registry with Azure API Center](/blog/setup-mcp-registry) last year. That post covers the mechanics: register your MCP servers, expose an endpoint, point Copilot at it, restrict access to registry-only. It works, and it's a real control. But a registry alone answers one question: is this server on the approved list? It doesn't answer the harder one: should it be.

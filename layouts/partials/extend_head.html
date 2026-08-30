@@ -1,0 +1,48 @@
+{{- /* A full Person entity on /about, so retrieval systems resolve "Luiz Bon"
+       to one identity rather than several loose mentions. The homepage Person
+       comes from params.schema in config.toml; this adds role, location and
+       subject matter that the theme's generic template has no field for. */ -}}
+{{- if eq .RelPermalink "/about/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ printf "%s#luizbon" site.Home.Permalink }},
+    "name": "Luiz Bon",
+    "url": {{ site.Home.Permalink }},
+    "jobTitle": "Engineering Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Prospa",
+      "url": "https://prospa.com/"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "addressCountry": "AU"
+    },
+    "knowsAbout": [
+      "C#",
+      ".NET",
+      "Microsoft Azure",
+      "Event-driven architecture",
+      "Domain-driven design",
+      "Azure Service Bus",
+      "Microservices",
+      "OpenTelemetry",
+      "Terraform",
+      "Model Context Protocol",
+      "Platform engineering",
+      "Engineering leadership"
+    ],
+    "sameAs": [
+      "https://github.com/luizbon",
+      "https://www.linkedin.com/in/luizbon"
+    ]
+  }
+}
+</script>
+{{- end }}

@@ -3,8 +3,13 @@ layout: blog
 title: Are you prepared for your next job interview?
 date: 2019-09-23T11:47:51.299Z
 thumbnail: /img/interview-1714370_1920.jpg
+description: "Why technical interviews exist and how interviewers actually evaluate candidates, from someone who has sat on both sides of the table."
+tags:
+  - "interviewing"
+  - "hiring"
+  - "career"
 ---
-# Are you prepared for your next job interview?
+## Are you prepared for your next job interview?
 
 Have you ever failed in a technical interview? I bet 100% of the readers will say yes unless you never did one.
 This article is not to teach you to succeed in a technical interview but to explain why they exist and how interviewers evaluate candidates.

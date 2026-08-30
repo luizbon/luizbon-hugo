@@ -3,6 +3,13 @@ layout: blog
 title: How to Set Up an MCP Registry for GitHub Copilot
 date: 2025-10-13T11:15:28Z
 thumbnail: /img/mcp-registry-setup.png
+description: "A step-by-step guide to standing up an MCP Registry with Azure API Center so GitHub Copilot can only reach approved MCP servers."
+tags:
+  - "MCP"
+  - "GitHub Copilot"
+  - "Azure API Center"
+  - "Azure"
+  - "governance"
 ---
 
 ## Introduction

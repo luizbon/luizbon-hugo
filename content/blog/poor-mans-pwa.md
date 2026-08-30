@@ -1,10 +1,19 @@
 ---
-title: "The poor man's Progressive Wep App"
+title: "The poor man's Progressive Web App"
+slug: "the-poor-mans-progressive-web-app"
+aliases:
+  - "/blog/the-poor-mans-progressive-wep-app/"
 date: 2018-07-31T19:41:37+10:00
 draft: false
+description: "Turning a spreadsheet request from my father into an offline-capable Progressive Web App with no framework and no build step."
+tags:
+  - "PWA"
+  - "JavaScript"
+  - "service worker"
+  - "web"
 ---
 
-# A bit of context
+## A bit of context
 
 [*I don't care about the context, show me the solution!*](#solution)
 
@@ -46,7 +55,7 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Progressive_Web_Apps) thi
 
 <a id="solution"></a>With that in mind, let's go to my solution.
 
-# 1. The App
+## 1. The App
 
 To create the app I used the [Create React App](https://github.com/facebook/create-react-app) project from Facebook. The output is a basic app with a service worker in place.
 So with a simple command I can check some items from the PWA list.
@@ -56,7 +65,7 @@ So with a simple command I can check some items from the PWA list.
 
 This is really nice, but still have some checkboxes to tick.
 
-# 2. Bootstrap
+## 2. Bootstrap
 
 The app looks nice but it does nothing. Knowing I'll need to create a simple form for data input and a table to show the data, I've pulled the [Bootstrap 4](http://getbootstrap.com/) package and changed the inport from index.html.
 
@@ -68,7 +77,7 @@ And now I can tick one more item.
 
 That's really nice, I have an app with 3 checkboxes ticked, but what about the functionality? It's time to write some code.
 
-# 3. React App
+## 3. React App
 
 I'm not going into much detail here, it's not the intention of the post.
 
@@ -76,7 +85,7 @@ The app consists in a form with three fields pushing into an array and a table w
 
 All work fine, but what about persistence? I need to save this data somewhere.
 
-# 4. Firebase
+## 4. Firebase
 
 After a quick research I've choosed [Firebase](https://firebase.google.com/) to persist my data. It has a service called [Realtime Database](https://firebase.google.com/products/realtime-database/) where I can save documents.
 It's Javascript SDK has support for offline access and syncronization, so I don't lose my **Connectivity independent** tick.
@@ -88,14 +97,14 @@ Because the app have a service worker registered, I don't need to open the app t
 
 With the data being saved online, now was time to secure the data.
 
-# 5. Authentication
+## 5. Authentication
 
 To solve the Autentication issue Firebase came in handy again. It's SDK has auth integration with [Firebase Authentication](https://firebase.google.com/products/auth/), so I only needed to build a simple account creatiion form and a login page.
 After that I configured my database security and it's all in place, each user has access only to their data.
 
 To have another checkbox ticked I need to solve the hosting.
 
-# 6. CI/CD
+## 6. CI/CD
 
 To deploy my code as easly as possible I choosed [Netlify](https://www.netlify.com/) as it can integrate with a Git repository and do the deployment.
 When configuring the app Netlify could identify it was a Create React App application and suggested me the build command. So it was a next>next>finish experience to have my site up and running on my custom domain with a [Let's Encrypt](https://letsencrypt.org/) certificate.
@@ -108,7 +117,7 @@ After that I was able to tick on last checkbox
 - [x] Linkable
 - [x] Safe
 
-# The Result
+## The Result
 
 At the end I spend less than a full day of work of my free time build a fully function app hosted on a HTTPS address with online database and offline capabilities.
 

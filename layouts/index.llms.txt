@@ -1,0 +1,15 @@
+{{- /* Plain-text index of the site for LLM retrieval. Published at /llms.txt. */ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+{{ with site.GetPage "/about" }}{{ .RawContent | plainify | chomp }}{{ end }}
+
+## Posts
+
+{{ range (where site.RegularPages "Section" "blog").ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . | plainify | chomp }}{{ else }}{{ .Summary | plainify | chomp | truncate 200 }}{{ end }} (published {{ .Date.Format "2006-01-02" }})
+{{ end }}
+## Full text
+
+Every post is available in full in the RSS feed at {{ "index.xml" | absURL }}.

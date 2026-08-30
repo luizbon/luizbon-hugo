@@ -2,6 +2,12 @@
 title: "Lessons learned from a conference ChatBot"
 date: 2017-09-02T19:45:24+10:00
 draft: false
+description: "What I learned building a conference chatbot for NDC Sydney with adaptive cards, QnAMaker, and Bing search as a fallback."
+tags:
+  - "chatbot"
+  - "Azure"
+  - "NDC Sydney"
+  - "bot framework"
 ---
 
 This year I worked as a volunteer at [NDC Sydney](https://ndcsydney.com/), and since I was involved with it, I decided to write a Bot to help attendees find sessions.
