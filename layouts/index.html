@@ -1,0 +1,61 @@
+{{- /* Home page only. Splits the archive so current work leads and the older
+       posts stay reachable without competing with it. Everything else on the
+       site still uses the theme's _default/list.html. */ -}}
+{{- define "main" }}
+
+{{- partial "home_info.html" . }}
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- $pages = $pages.ByDate.Reverse }}
+
+{{- $months := site.Params.currentWorkMonths | default 24 }}
+{{- $cutoff := now.AddDate 0 (int (mul -1 $months)) 0 }}
+{{- $current := where $pages "Date" "ge" $cutoff }}
+{{- $earlier := where $pages "Date" "lt" $cutoff }}
+
+{{- /* A brand-new site would show an empty lead section, so fall back to the
+       most recent posts when nothing is inside the window. */ -}}
+{{- if not $current }}
+{{- $current = first 2 $pages }}
+{{- $earlier = after 2 $pages }}
+{{- end }}
+
+{{- with $current }}
+<section class="home-section">
+  <h2 class="home-section-title">{{ i18n "home_current" | default "Current work" }}</h2>
+  {{- range . }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">{{ .Title }}</h2>
+    </header>
+    {{- with (or .Description .Summary) }}
+    <div class="entry-content">
+      <p>{{ . | plainify | htmlUnescape }}</p>
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+      {{- partial "post_meta.html" . -}}
+      {{- with .Params.tags }} · {{ delimit (first 3 .) ", " }}{{ end }}
+    </footer>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  </article>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with $earlier }}
+<section class="home-section">
+  <h2 class="home-section-title">{{ i18n "home_earlier" | default "Earlier" }}</h2>
+  <ul class="home-archive">
+    {{- range . }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}

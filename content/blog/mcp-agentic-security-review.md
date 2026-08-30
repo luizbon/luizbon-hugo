@@ -12,7 +12,7 @@ tags:
   - "GitHub Copilot"
   - "security"
   - "platform engineering"
-  - "CI/CD"
+  - "CI"
 ---
 
 I wrote about [setting up an MCP Registry with Azure API Center](/blog/setup-mcp-registry) last year. That post covers the mechanics: register your MCP servers, expose an endpoint, point Copilot at it, restrict access to registry-only. It works, and it's a real control. But a registry alone answers one question: is this server on the approved list? It doesn't answer the harder one: should it be.

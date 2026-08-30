@@ -61,9 +61,22 @@ TocOpen             = false
 ShowWordCount       = true
 ShowRssButtonInSectionTermList = true
 
+# Posts newer than this lead the home page; older ones drop to the compact
+# archive list below them. Read by layouts/index.html.
+currentWorkMonths = 24
+
+# Home-page chips. Each entry resolves against the real tag taxonomy in
+# layouts/partials/home_info.html, so a tag with no posts is skipped rather
+# than rendering a dead link.
+topics = ["MCP", "Azure", "platform engineering", "security"]
+
 [params.homeInfoParams]
 Title   = "Luiz Bon"
-Content = "Engineering manager in Sydney. I write about event-driven .NET on Azure, platform engineering, and how AI coding agents fit safely into an engineering organisation."
+Content = "Engineering manager in Sydney. Event-driven .NET on Azure, platform engineering, and letting AI coding agents into a codebase without losing control of what they can reach."
+
+[params.profile]
+avatar    = "/img/luiz-bon.jpg"
+avatarAlt = "Luiz Bon"
 
 # Drives the Person entity in the homepage JSON-LD (see themes/hugo-PaperMod
 # /layouts/partials/templates/schema_json.html) and the header social links.

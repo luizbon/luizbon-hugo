@@ -1,0 +1,38 @@
+{{- /* Overrides the theme's home_info: adds the avatar and the topic chips,
+       and drops the .first-entry class that forces a 320px min-height and
+       vertically centres the block, which is what left the gap above the
+       first post. */ -}}
+{{- with site.Params.homeInfoParams }}
+<article class="home-info">
+  <div class="home-intro">
+    {{- with site.Params.profile.avatar }}
+    <img class="home-avatar" src="{{ . | relURL }}" width="88" height="88"
+         alt="{{ site.Params.profile.avatarAlt | default site.Title }}" loading="eager">
+    {{- end }}
+    <div class="home-intro-text">
+      <h1>{{ .Title | markdownify }}</h1>
+      <div class="entry-content">{{ .Content | markdownify }}</div>
+    </div>
+  </div>
+
+  {{- /* Chips resolve against the real tag taxonomy, so a tag that does not
+         exist is skipped rather than shipping a dead link. */ -}}
+  {{- $chips := slice }}
+  {{- range site.Params.topics }}
+  {{- with site.GetPage (printf "/tags/%s" (urlize .)) }}
+  {{- $chips = $chips | append . }}
+  {{- end }}
+  {{- end }}
+  {{- with $chips }}
+  <nav class="home-topics" aria-label="Topics">
+    {{- range . }}
+    <a class="home-topic" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{- end }}
+  </nav>
+  {{- end }}
+
+  <footer class="entry-footer">
+    {{ partial "social_icons.html" (dict "align" .AlignSocialIconsTo) }}
+  </footer>
+</article>
+{{- end -}}
